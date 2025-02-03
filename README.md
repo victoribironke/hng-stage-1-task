@@ -14,13 +14,13 @@ This project is an API built with Express.
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/victoribironke/hng-stage-0-task
+   git clone https://github.com/victoribironke/hng-stage-1-task
    ```
 
 2. Navigate to the project directory:
 
    ```sh
-   cd hng-stage-0-task
+   cd hng-stage-1-task
    ```
 
 3. Install the dependencies:
@@ -56,18 +56,23 @@ https://hng-stage-0-task-eta.vercel.app
 
 ## Endpoints
 
-### 1. **Main endpoint**
+### 1. **Classify number**
 
-Returns my email address, the current timestamp in the ISO 8601 format, and the repo's URL.
+Returns some properties of the number and a fun fact.
 
-- **Endpoint**: `GET /`
+- **Endpoint**: `GET /api/classify-number`
+- **Query Parameters**:
+  - `number` (required): The number to classify.
 - **Response**:
   - **Success** (`200`):
     ```json
     {
-      "email": "victoribironke2019@gmail.com",
-      "current_datetime": "2025-01-31T08:52:46.810Z",
-      "github_url": "https://github.com/victoribironke/hng-stage-0-task"
+      "number": "153",
+      "is_prime": false,
+      "is_perfect": false,
+      "properties": ["armstrong", "odd"],
+      "digit_sum": 9,
+      "fun_fact": "153 is a narcissistic number."
     }
     ```
 
