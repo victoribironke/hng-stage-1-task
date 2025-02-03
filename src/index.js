@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
-app.get("/get", (req, res) => {
+app.get("/", (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
 
   res.send("Test endpoint working!");
